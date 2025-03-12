@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goeie Avond</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            /* Achtergrondkleur van de pagina */
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            /* Kleur van de nav bar */
+            overflow: hidden;
+        }
+
+        nav a,
+        nav img {
+            float: left;
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            color: white;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .image-item {
+            text-align: center;
+            max-width: 200px;
+        }
+
+        .image-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            color: #555;
+            font-style: italic;
+        }
+
+        .video-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .container {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        h1 {
+            color: #555;
+        }
+
+        p,
+        input,
+        button {
+            margin: 10px 0;
+        }
+
+        input,
+        button {
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+
+        .result p {
+            font-weight: bold;
+        }
+
+        .button-primary {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .button-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#" onclick="showSection('welkom')">Welkom</a>
+        <a href="#" onclick="showSection('Even mijzelf voorstellen')">Even mijzelf voorstellen</a>
+        <a href="#" onclick="showSection('wandelsport')">Wandelsport</a>
+        <a href="#" onclick="showSection('sport')">Sport</a>
+        <a href="#" onclick="showSection('contact')">Contact</a>
+        <a href="#" onclick="showSection('schoon-volk')">Schoon Volk</a>
+        <a href="#" onclick="showSection('leeftijd-raden')">Leeftijd Raden</a>
+        <!-- Voeg hier een afbeelding toe aan de navigatiebalk -->
+        <img src="data/stanny.jpg" alt="Logo" style="height: 66px; padding: 10px;">
+    </nav>
+     <div class="content">
+        <section id="welkom" class="section" style="display: block;">
+            <h1>Welkom op mijn eerste website</h1>
+            <p>We zijn blij dat je hier bent. Klik <a href="contact.html">hier</a> om contact met ons op te nemen.</p>
+</body>
+            <p>Welkom! Dit is de beginpagina van mijn website. Hier kun je verschillende secties verkennen.</p>
+        </section>
+
+        <section id="Even mijzelf voorstellen" class="section" style="display: none;">
+            <h2>Over Mij</h2>
+            <p>Mijn naam is Stanny Bartholomeeusen.</p>
+            <p>32 jaar ben ik treinbestuurder geweest in reizigers depot St Niklaas.</p>
+            <p>Ben 17 jaar gepensioneerd.</p>
+            <p>Ben heel sportief.</p>
+            <p>Heb vele loopsport wedstrijden gedaan bij de NMBS.</p>
+            <p>Nu wandel ik veel op georganiseerde wandelingen.</p>
+            <p>Op 16 jaar naar meer dan 23.000 km gewandeld.</p>
+        </section>
+
+        <section id="wandelsport" class="section" style="display: none;">
+            <h2>Foto's</h2>
+            <div class="image-container">
+                <div class="image-item">
+                    <img src="data/Foto1.jpg.jpg" alt="Een wandelaar in de schaduw">
+                    <div class="image-caption">Een wandelaar in de schaduw</div>
+                </div>
+                <div class="image-item">
+                    <img src="data/Foto2.jpg.jpg" alt="Even een rustmoment">
+                    <div class="image-caption">Even een rustmoment</div>
+                </div>
+                <div class="image-item">
+                    <img src="data/Foto3.jpg.JPG" alt="Een andere mooie foto van een wandeling">
+                    <div class="image-caption">Een andere mooie foto van een wandeling</div>
+                </div>
+                <div class="image-item">
+                    <img src="data/Dodentocht.JPG" alt="Dodentocht">
+                    <div class="image-caption">Een foto van de Dodentocht</div>
+
+            </div>
+            <div class="image-item"> <a href="data/Kilometers%20tussen%202008%20en%202024.html"> 
+                <img src="data/thumb_kilometers.png" alt="Hier zie je onze wandelkilometers sinds 2008"> 
+                <div class="image-caption">Hier zie je onze wandelkilometers sinds 2008</div>
+             </a>
+
+        </section>
+
+        <section id="sport" class="section" style="display: none;">
+            <h2>Hier zie je een video van een wandelevenement voor het goede doel</h2>
+            <div class="video-container" style="max-width: 500px; margin: 0 auto;">
+                <video controls style="width: 100%; height: auto;">
+                    <source src="data/Film De Wase 1000.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="link-container">
+                <a href="data/Film De Wase 1000.mp4" class="button-primary">Bekijk deze video</a>
+            </div>
+        </section>
+        
+                </div>
+            </div>
+        </section>
+
+    </div>
+    </section>
+
+    <section id="schoon-volk" class="section" style="display: none;">
+        <h2>Schoon Volk</h2>
+        <p>Wij zijn beiden schoonvolk opruimers we halen om de veertien dagen het zwerfvuil op in onze straten</p>
+        <p>De stad Sint-Niklaas haalt jaarlijks een aanzienlijke hoeveelheid zwerfvuil op. De opruimkomsten kosten de stad bijna 1 miljoen euro per jaar. Bovendien is het aantal meldingen van sluikstort of zwerfvuil in Sint-Niklaas op twee jaar tijd verdubbeld, wat gedeeltelijk toegeschreven wordt aan de coronapandemie</p>
+
+        <!-- Screenshot toevoegen -->
+        <div class="image-container">
+            <div class="image-item">
+                <img src="data/Schoon Volk.jpg" alt=" ">
+                <div class="image-caption">Een vrijwille daad aan de propere straat</div>
+            </div>
+        </div>
+        <script>
+            function showSection(id) {
+                let sections = document.querySelectorAll('.section');
+                sections.forEach(function (section) {
+                    section.style.display = 'none';
+                });
+                document.getElementById(id).style.display = 'block';
+            }
+            
+            function checkGuess() {
+                let guess = parseInt(document.getElementById("guessInput").value);
+                let actualAge = 70; // Vul hier je eigen leeftijd in
+    
+                let resultContainer = document.getElementById("resultContainer");
+                let resultText = document.getElementById("resultText");
+    
+                if (guess === actualAge) {
+                    resultText.textContent = "Gefeliciteerd! Je hebt mijn leeftijd geraden.";
+                } else if (guess < actualAge) {
+                    resultText.textContent = "Nee, ik ben ouder dan dat!";
+                } else {
+                    resultText.textContent = "Nee, ik ben jonger dan dat!";
+                }
+    
+                resultContainer.style.display = "block";
+                document.getElementById("questionContainer").style.display = "none";
+            }
+    
+            function resetGame() {
+                document.getElementById("guessInput").value = "";
+                document.getElementById("resultContainer").style.display = "none";
+                document.getElementById("questionContainer").style.display = "block";
+            }
+        </script>
+    
+    </section>
+
+    <section id="leeftijd-raden" class="section" style="display: none;">
+        <div class="container">
+            <h1>Leeftijd Raden</h1>
+            <div id="questionContainer">
+                <p>Hoe oud denk je dat ik ben?</p>
+                <input type="number" id="guessInput">
+                <button class="button-primary" onclick="checkGuess()">Raad</button>
+            </div>
+            <div id="resultContainer" style="display: none;" class="result">
+                <p id="resultText"></p>
+                <button class="button-primary" onclick="resetGame()">Opnieuw spelen</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section" style="display: none;">
+        <h2>Contact</h2>
+        <p>Hier kun je contact met mij opnemen.</p>
+        <form action="mailto:bartholomeeusen18@gmail.com" method="post" enctype="text/plain">
+            <label for="naam">Naam:</label>
+            <input type="text" id="naam" name="naam" required><br>
+
+            <label for="email">E-mailadres:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="bericht">Bericht:</label>

@@ -1,0 +1,91 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leeftijd Raden</title>
+    <style>
+        .container {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        h1 {
+            color: #555;
+        }
+
+        p, input, button {
+            margin: 10px 0;
+        }
+
+        input, button {
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+
+            .result p {
+                font-weight: bold;
+            }
+
+        .button-primary {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+            .button-primary:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Leeftijd Raden</h1>
+        <div id="questionContainer">
+            <p>Hoe oud denk je dat ik ben?</p>
+            <input type="number" id="guessInput">
+            <button class="button-primary" onclick="checkGuess()">Raad</button>
+        </div>
+        <div id="resultContainer" style="display: none;" class="result">
+            <p id="resultText"></p>
+            <button class="button-primary" onclick="resetGame()">Opnieuw spelen</button>
+        </div>
+    </div>
+
+    <script>function checkGuess() {
+      var guess = parseInt(document.getElementById("guessInput").value);
+      var actualAge = 70; // Vul hier je eigen leeftijd in
+
+      var resultContainer = document.getElementById("resultContainer");
+      var resultText = document.getElementById("resultText");
+
+      if (guess === actualAge) {
+        resultText.textContent = "Gefeliciteerd! Je hebt mijn leeftijd geraden.";
+      } else if (guess < actualAge) {
+        resultText.textContent = "Nee, ik ben ouder dan dat!";
+      } else {
+        resultText.textContent = "Nee, ik ben jonger dan dat!";
+      }
+
+      resultContainer.style.display = "block";
+      document.getElementById("questionContainer").style.display = "none";
+    }
+
+    function resetGame() {
+      document.getElementById("guessInput").value = "";
+      document.getElementById("resultContainer").style.display = "none";
+      document.getElementById("questionContainer").style.display = "block";
+    }</script>
+</body>
+</html>
+
